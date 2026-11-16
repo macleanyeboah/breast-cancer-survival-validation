@@ -1,0 +1,5 @@
+"step","tvc","aic"
+"baseline","",7352.29760825116
+"add lpgr","lpgr",7318.49556034342
+"add lnodes","lpgr, lnodes",7307.24873746895
+"add ler","lpgr, lnodes, ler",7302.63480481239

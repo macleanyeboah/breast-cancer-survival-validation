@@ -1,0 +1,205 @@
+{
+  "n_dev": 2982,
+  "events5_dev": 1275,
+  "n_val": 686,
+  "events5_val": 285,
+  "rp_df": 2,
+  "rp_tvc": ["lpgr", "lnodes", "ler"],
+  "rp_aic_gain": 49.662803,
+  "rsf": {
+    "nodesize": 15,
+    "mtry": 2,
+    "ntree": 1000
+  },
+  "internal": [
+    {
+      "model": "Cox",
+      "measure": "c_harrell",
+      "apparent": 0.695788,
+      "optimism": 0.002204,
+      "corrected": 0.693584
+    },
+    {
+      "model": "Cox",
+      "measure": "slope",
+      "apparent": 1,
+      "optimism": 0.016811,
+      "corrected": 0.983189
+    },
+    {
+      "model": "Royston-Parmar",
+      "measure": "c_harrell",
+      "apparent": 0.695618,
+      "optimism": 0.002439,
+      "corrected": 0.693178
+    },
+    {
+      "model": "Royston-Parmar",
+      "measure": "slope",
+      "apparent": 1.05165,
+      "optimism": 0.018413,
+      "corrected": 1.033238
+    },
+    {
+      "model": "Random survival forest",
+      "measure": "c_harrell",
+      "apparent": 0.782018,
+      "corrected": 0.691307
+    }
+  ],
+  "external": [
+    {
+      "model": "Cox",
+      "harrell": 0.691898,
+      "harrell_se": 0.015152,
+      "uno": 0.67436,
+      "uno_se": 0.01536,
+      "brier": 0.208986,
+      "brier_null": 0.249858,
+      "ipa": 0.163582,
+      "observed": 0.508355,
+      "expected": 0.485565,
+      "oe": 1.046936,
+      "slope": 1.117139,
+      "slope_se": 0.102785,
+      "ici": 0.030996,
+      "e50": 0.026172,
+      "e90": 0.065626
+    },
+    {
+      "model": "Royston-Parmar",
+      "harrell": 0.687845,
+      "harrell_se": 0.015361,
+      "uno": 0.670913,
+      "uno_se": 0.015464,
+      "brier": 0.210515,
+      "brier_null": 0.249858,
+      "ipa": 0.157462,
+      "observed": 0.508355,
+      "expected": 0.475224,
+      "oe": 1.069718,
+      "slope": 1.164189,
+      "slope_se": 0.109333,
+      "ici": 0.041353,
+      "e50": 0.033633,
+      "e90": 0.08648
+    },
+    {
+      "model": "Random survival forest",
+      "harrell": 0.675595,
+      "harrell_se": 0.015517,
+      "uno": 0.656709,
+      "uno_se": 0.015681,
+      "brier": 0.216866,
+      "brier_null": 0.249858,
+      "ipa": 0.132043,
+      "observed": 0.508355,
+      "expected": 0.48757,
+      "oe": 1.042629,
+      "slope": 1.055485,
+      "slope_se": 0.113983,
+      "ici": 0.029405,
+      "e50": 0.027301,
+      "e90": 0.059757
+    }
+  ],
+  "c_differences": [
+    {
+      "comparison": "rp_minus_cox",
+      "estimate": -0.003959,
+      "lower": -0.006792,
+      "upper": -0.000878,
+      "_row": "rp_minus_cox"
+    },
+    {
+      "comparison": "rsf_minus_cox",
+      "estimate": -0.016568,
+      "lower": -0.029322,
+      "upper": -0.003251,
+      "_row": "rsf_minus_cox"
+    }
+  ],
+  "recalibration": [
+    {
+      "model": "Cox",
+      "shift": 0.074458,
+      "ici_before": 0.030996,
+      "ici_after": 0.019257,
+      "oe_after": 0.99999
+    },
+    {
+      "model": "Royston-Parmar",
+      "shift": 0.107152,
+      "ici_before": 0.041353,
+      "ici_after": 0.023899,
+      "oe_after": 1
+    },
+    {
+      "model": "Random survival forest",
+      "shift": 0.066958,
+      "ici_before": 0.029405,
+      "ici_after": 0.015973,
+      "oe_after": 1.000007
+    }
+  ],
+  "sensitivity_node_positive": [
+    {
+      "model": "Cox",
+      "harrell": 0.695164,
+      "harrell_se": 0.015058,
+      "uno": 0.679992,
+      "uno_se": 0.015177,
+      "brier": 0.206915,
+      "brier_null": 0.249858,
+      "ipa": 0.171869,
+      "observed": 0.508355,
+      "expected": 0.485271,
+      "oe": 1.04757,
+      "slope": 1.073459,
+      "slope_se": 0.097193,
+      "ici": 0.032385,
+      "e50": 0.028261,
+      "e90": 0.067765,
+      "n_development": 1546
+    },
+    {
+      "model": "Royston-Parmar",
+      "harrell": 0.690295,
+      "harrell_se": 0.015334,
+      "uno": 0.676042,
+      "uno_se": 0.015319,
+      "brier": 0.207862,
+      "brier_null": 0.249858,
+      "ipa": 0.168081,
+      "observed": 0.508355,
+      "expected": 0.480084,
+      "oe": 1.058888,
+      "slope": 1.139677,
+      "slope_se": 0.105813,
+      "ici": 0.039846,
+      "e50": 0.033742,
+      "e90": 0.083025,
+      "n_development": 1546
+    },
+    {
+      "model": "Random survival forest",
+      "harrell": 0.681085,
+      "harrell_se": 0.015475,
+      "uno": 0.665283,
+      "uno_se": 0.015568,
+      "brier": 0.213541,
+      "brier_null": 0.249858,
+      "ipa": 0.145353,
+      "observed": 0.508355,
+      "expected": 0.504756,
+      "oe": 1.007131,
+      "slope": 1.182972,
+      "slope_se": 0.121517,
+      "ici": 0.02382,
+      "e50": 0.016512,
+      "e90": 0.057252,
+      "n_development": 1546
+    }
+  ],
+  "versions": ["R version 4.3.3 (2024-02-29)", "3.5.8", "1.7.1", "3.10.0"]
+}

@@ -1,0 +1,10 @@
+# Reproduce every table and figure:  Rscript run_all.R
+for (f in c("R/functions.R", "R/01_data.R", "R/02_models.R", "R/03_validation.R", "R/04_figures.R"))
+  source(f)
+dir.create("results/tables", recursive = TRUE, showWarnings = FALSE)
+dir.create("results/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
+t0 <- Sys.time()
+s <- run_analysis(".", B = 200)
+make_figures(".")
+cat(sprintf("Done in %.1f minutes\n", as.numeric(difftime(Sys.time(), t0, units = "mins"))))
